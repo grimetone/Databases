@@ -3,14 +3,14 @@ const crypto = require('crypto');
 
 const file = 'db.txt';
 // Set up write stream
-const writeStream = fs.createWriteStream('db.txt');
-
+const writeStream = fs.createWriteStream(file);
+const readStream = fs.createReadStream(file);
 /**
  * Set up DB class
  */
 class DB {
   constructor() {
-    this.list = file.getAsText();
+    this.list = [];
   }
 // Gets the input keys value
   getValue(x) {
@@ -38,12 +38,8 @@ class DB {
  */
 let database = new DB();
 
-database.setData('a', 1)
-console.log(database.getValue('a')) // 1
-console.log(database.getValue('I_DONT_EXIST')) // undefined
+database.setData('blah', 1)
 
-// create another Buffer of 100 bytes and write
-writeStream.write('hello');
 
 
 writeStream.end();
