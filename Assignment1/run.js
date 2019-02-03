@@ -1,10 +1,11 @@
 const fs = require('fs');
 const crypto = require('crypto');
+const myReader = require('FileReader');
 
 const file = 'db.txt';
 // Set up write stream
 const writeStream = fs.createWriteStream(file);
-const readStream = fs.createReadStream(file);
+
 /**
  * Set up DB class
  */
@@ -27,8 +28,8 @@ class DB {
   	let buffer;
     this.list.push([x, y])
     //Create buffer
-    buffer = Buffer.from([x, y]);
-    writeStream.write([x, y]);
+    // buffer = Buffer.from([x, y]);
+    // writeStream.write([x, y]);
   }
 }
 

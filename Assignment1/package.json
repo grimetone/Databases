@@ -1,0 +1,14 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "Assignment 1 - Simple DB with Hashmap-based Index",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "FileReader": "^0.10.2"
+  }
+}
