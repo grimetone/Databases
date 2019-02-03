@@ -1,17 +1,33 @@
 const fs = require('fs');
 const crypto = require('crypto');
-const myReader = require('FileReader');
+const util = require('util');
 
+// Storage location
 const file = 'db.txt';
 // Set up write stream
 const writeStream = fs.createWriteStream(file);
+const reader = fs.readFile(file);
+const readUtil = util.promisify(fs.readFile);
 
 /**
  * Set up DB class
  */
+async function readFile(file) {
+  const fileContent = await readUtil(file, 'utf8');
+  console.log('content: '+fileContent);
+  return fileContent;
+}
+
+async function convertBinary(file){
+  const content = await readFile(file);
+  const convertedContent = content.toString();
+  console.log('Converted content: '+ convertedContent);
+  return convertedContent;
+}
+
 class DB {
   constructor() {
-    this.list = [];
+    this.list = convertBinary(file);
   }
 // Gets the input keys value
   getValue(x) {
@@ -26,10 +42,10 @@ class DB {
 // Sets the data
   setData(x, y) {
   	let buffer;
-    this.list.push([x, y])
+    //this.list.push([x, y])
     //Create buffer
-    // buffer = Buffer.from([x, y]);
-    // writeStream.write([x, y]);
+    buffer = Buffer.from([x, y]);
+    writeStream.write(buffer);
   }
 }
 
@@ -39,9 +55,7 @@ class DB {
  */
 let database = new DB();
 
-database.setData('blah', 1)
 
-
-
+database.setData('test', 1);
 writeStream.end();
 
