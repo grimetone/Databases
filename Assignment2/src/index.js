@@ -36,7 +36,7 @@ function csvStream() {
     .parse()
     .on("data", function(data){
   let insObj = {polarity: data[0], id: data[1], date: data[2], query: data[3], user: data[4], text: data[5]};
-  db.collection('tweets').insert(insObj);
+  // db.collection('tweets').insert(insObj);
     })
     .on("end", function(){
          console.log("done");
