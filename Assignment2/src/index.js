@@ -45,27 +45,3 @@ function csvStream() {
 stream.pipe(csvStream());
 
 console.log('Data insertion complete ... ');
-
-// function twitterLinkedUsers() {
-// }
-// function mostMentionedUsers() {
-// 	db.tweets.aggregate([ 
-//     {$project:{ AccountName: "$user", count: {$size:{"$ifNull":["$text",[]]} } }}, 
-//     {$sort : {count : -1}}, 
-//     {$limit : 10 }
-// ])
-
-// }
-// function mostActiveUsers() {
-// 	db.tweets.aggregate([ 
-//     {$project:{ AccountName: "$user", count: {$size:{"$ifNull":["$text",[]]} } }}, 
-//     {$sort : {count : -1}}, 
-//     {$limit : 10 }
-// }
-// function mostGrumpy() {
-// 	db.tweets.aggregate([ 
-//     {$Grumpiest:{ AccountName: "$user", count: {$size:{"$ifNull":["$text",[]]} } }}, 
-//     {$sort : {count : -1}}, 
-//     {$limit : 10 }
-// }
-// function mostHappy() {}

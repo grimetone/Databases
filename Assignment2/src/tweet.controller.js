@@ -27,6 +27,20 @@ exports.count = function (req, res) {
      }
 });
 }
+exports.active = function (req, res, next) {
+	Tweet.aggregate(
+    {$group : {_id : "$user", "count" : {$sum : 1}}},
+    {$sort : {"count" : -1}},
+    {$limit : 10}, function (err, users) {
+    	if (err) {
+    		res.send(err);
+    	}
+    	else {
+    		res.send(users);
+    	}
+    });
+}
+
 // exports.grumpiest = function (req, res) {
 // 	Tweet.aggregate([ 
 //     {$project:{ AccountName: "$user", count: {$size:{"$ifNull":["$text",[]]} } }}, 

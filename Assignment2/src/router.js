@@ -6,6 +6,7 @@ const tweet_controller = require('./tweet.controller');
 router.get('/test', tweet_controller.test);
 router.get('/count', tweet_controller.count);
 router.get('/:id', tweet_controller.tweet);
+router.get('/active', tweet_controller.active);
 // router.get('/grumpiest', tweet_controller.grumpiest);
 // router.get('/happiest', tweet_controller.happiest);
 
