@@ -1,0 +1,35 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,graphql -x node src/index.js",
+    "start2": "nodemon -e js,graphql -x node src/index.js",
+    "start:dev": "npm-run-all --parallel debug playground",
+    "debug": "nodemon -e js, graphql -x node --inspect src/index.js",
+    "playground": "graphql playground -e variables.env",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma-deploy": "prisma deploy -e variables.env --force"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "csv-parser": "^2.1.0",
+    "dotenv": "6.0.0",
+    "fast-csv": "^2.4.1",
+    "graphql": "^0.13.2",
+    "graphql-cli": "^2.17.0",
+    "graphql-yoga": "^1.16.2",
+    "jsonwebtoken": "8.3.0",
+    "mongodb": "^1.4.40",
+    "nodemon": "^1.18.7",
+    "prisma-binding": "^2.1.6"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
