@@ -112,3 +112,9 @@ Model | Atomicity | Sharding |Indexes |Large Number of Collections | Collection 
 Arrays of Ancestors	|x| |x|x| |
 Materialized paths  | |x ||x|x|
 Nested sets			|x|x|x|| |
+
+Arrays of ancestors make use of indexing allowing one to find both descendents and ancestors extremely quickly by indexing the ancestor field. 
+
+Materialized paths store the full relationship path between documents. 
+
+Nested sets are great for finding subtrees, but are not great for modification. As they are not designed to change and should be static they are good for indexing and atomicity. They should also be a good solution for a subtrees they should also be good for a collection containing a large number of smaller documents
