@@ -18,7 +18,7 @@ WHERE customers.city = offices.city;`
 
 #### Graphical Action Plan
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment6/images/q1Execution.png)
 
 #### Issue
 
