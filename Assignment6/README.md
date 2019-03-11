@@ -38,7 +38,7 @@ CREATE INDEX offices_code ON offices (officeCode);`
 
 #### Graphical Action Plan
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment6/images/q2Execution.png)
 
 ### Exercise 3
 
@@ -58,7 +58,7 @@ FROM
     payments USING (customerNumber)
     GROUP BY city;`
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment6/images/q3ExecutionGrouping.png)
 
 #### Windowing
 
