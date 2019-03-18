@@ -41,3 +41,5 @@ This update will not work without turning off safe_mode on SQL, as we do not use
 
 ### Exercise 4
 
+
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment7/img/btree.jpg)
