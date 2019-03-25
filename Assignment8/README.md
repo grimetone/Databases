@@ -5,9 +5,9 @@ Use the following command to create a slave for my master MySQL host
 
 
 As we can see here, the slave works and is connected to my master host:
-![alt text](https://github.com/grimetone/Databases/blob/master/Assignment8/img/slave_connected.png)
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment8/img/slave_works.png)
 
 
 Here we can see the results of a query to select the employee from myslave MySQL server which had previously been inserted into my master MySQL server.
 I'm not sure how to check the length of time it took, however it was under a minute. 
-![alt text](https://github.com/grimetone/Databases/blob/master/Assignment8/img/slave_works.png)
+![alt text](https://github.com/grimetone/Databases/blob/master/Assignment8/img/slave_functions.png)
