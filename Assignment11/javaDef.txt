@@ -1,0 +1,102 @@
+public class Customer {
+private String name;
+private List<Order> orders;
+    public String getname() {
+        return name;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+    }
+public List<Order> getorders() {
+        return orders;
+    }
+
+    public void setorders(List<Order> orders) {
+        this.orders = orders;
+    }
+ 
+public class Order {
+private String date;
+private int total;
+private List<OrderLine> lines;
+private Customer customer;
+    public String getdate() {
+        return date;
+    }
+
+    public void setdate(String date) {
+        this.date = date;
+    }
+    public int gettotal() {
+        return total;
+    }
+
+    public void settotal(int total) {
+        this.total = total;
+    }
+public List<OrderLine> getlines() {
+        return lines;
+    }
+
+    public void setlines(List<OrderLine> lines) {
+        this.lines = lines;
+    }
+ 
+public Customer getcustomer() {
+        return customer;
+    }
+
+    public void setcustomer(Customer customer) {
+        this.customer = customer;
+    }
+public class OrderLine {
+private Product product;
+private int total;
+private int count;
+private Order order;
+public Product getproduct() {
+        return product;
+    }
+
+    public void setproduct(Product product) {
+        this.product = product;
+    }
+    public int gettotal() {
+        return total;
+    }
+
+    public void settotal(int total) {
+        this.total = total;
+    }
+    public int getcount() {
+        return count;
+    }
+
+    public void setcount(int count) {
+        this.count = count;
+    }
+public Order getorder() {
+        return order;
+    }
+
+    public void setorder(Order order) {
+        this.order = order;
+    }
+public class Product {
+private int price;
+private String name;
+    public int getprice() {
+        return price;
+    }
+
+    public void setprice(int price) {
+        this.price = price;
+    }
+    public String getname() {
+        return name;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+    }
