@@ -51,15 +51,20 @@ return DISTINCT a.username, distance
 #### Results
 
 Queries are taking around an hour, making it hard to fix and I only get a few results each time.
-`
+
 ╒════════════╤══════════╕
+
 │"a.username"│"distance"│
+
 ╞════════════╪══════════╡
+
 │"ZPR"       │null      │
+
 ├────────────┼──────────┤
+
 │"Beep!Beep!"│null      │
+
 └────────────┴──────────┘
-`
 
 `
 Started streaming 2 records after 3572767 ms and completed after 3572767 ms.
