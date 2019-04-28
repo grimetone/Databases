@@ -25,20 +25,22 @@ UNWIND t.mentions as user
 with distinct user
 create (a:Tweeters{user:user})`
 
-`Added 22913 labels, created 22913 nodes, set 22913 properties, completed after 2623 ms.`
 
 `MATCH (a:Tweet),(b:Tweeters)
 WHERE b.user in a.mentions
 CREATE (tweeted)-[r:usermentions]->(a)`
 
+#### Results 
 `Added 22913 labels, created 22913 nodes, set 22913 properties, completed after 2623 ms.`
 
 
 ### Exercise 3
 
-`MATCH (a:Tweet),(b:Tweet)
+`
+MATCH (a:Tweet),(b:Tweet)
 where a.username = b.username and a <> b
 WITH a, b, distance(point({latitude: a.latitude, longitude: a.longitude}), point({latitude: b.latitude, longitude: b.longitude})) as distance
 ORDER BY distance DESC
   LIMIT 10
-return DISTINCT a.username, distance`
+return DISTINCT a.username, distance
+`
